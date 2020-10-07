@@ -32,10 +32,23 @@ export default {
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
     // https://go.nuxtjs.dev/bootstrap
-    'bootstrap-vue/nuxt'
+    'bootstrap-vue/nuxt',
+    '@nuxtjs/pwa'
   ],
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
+  },
+
+  server: {
+    port: 8083, // default: 3000,
+    host: '192.168.1.187'
+  },
+
+  pwa: {
+    meta: {
+      mobileApp: true,
+      mobileAppIOS: true
+    }
   }
 }
